@@ -1,9 +1,12 @@
 document.getElementById("add").onclick = add;
 
 let calc = {
-    firstNum: null,
-    secondNum: null,
-    operator: ``
+    firstNum: ``,
+    secondNum: ``,
+    operator: ``,
+    get display() {
+        return this.firstNum + this.operator + this.secondNum;
+    }
 };
 
 let outputText = document.querySelector("#output");
@@ -12,14 +15,19 @@ let inputText = document.querySelector("#input");
 
 function add() {
     if (!outputText.value) {
-        outputText.value = inputText.value + " + ";
 
-        calc.firstNum = inputText.value;
+        calc.firstNum = parseInt(inputText.value);
         calc.operator = "+";
 
         inputText.value = "";
-    }
+    } else {
 
+        calc.firstNum += parseInt(inputText.value);
+        calc.operator = "+";
+        inputText.value = "";
+
+    }
+    outputText.value = calc.display;
 }
 
 
