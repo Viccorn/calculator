@@ -27,20 +27,7 @@ let calc = {
 
     }
 };
-/*
-equal.addEventListener('click', function (e) {
 
-    if (!calc.secondNum) {
-        console.log("gugugaga")
-        calc.secondNum = parseInt(displayDown.value);
-    }
-    displayUp.value = calc.display;
-    displayDown.value = "";
-    calc.firstNum = calculate(calc.firstNum, calc.secondNum, calc.operator);
-    displayDown.value = calc.firstNum;
-
-});
-*/
 numPad.forEach(button => {
     button.addEventListener('click', function (e) {
         //gigaButton(button);
