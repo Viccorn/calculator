@@ -213,6 +213,8 @@ function multiply(a, b) {
 }
 function divide(a, b) {
     if (b == 0) {
+        clearButton();
+        calc.equalPress = true;
         return "Cannot divide by zero";
     } else {
         return a / b;
